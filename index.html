@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Chatbot</title>
+  <style>
+    /* Basic styling for layout and appearance */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Container for chatbot and header */
+    .chatbot-container {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Styling for header elements */
+    h1 {
+      color: #2d3748;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #4a5568;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Position the chatbot div within the container */
+    #aichatbot {
+      margin-top: 20px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Chatbot container with header and description -->
+  <div class="chatbot-container">
+    <h1>Welcome to Our Interactive Chatbot</h1>
+    <p>Have questions? Our chatbot is here to assist you with descriptions and basic queries. Start chatting below!</p>
+    
+    <!-- Chatbot Script from your provided code -->
+    <div id="aichatbot"></div>
+  </div>
+
+  <script>
+    !function(w, d, s, ...args){
+      var div = d.createElement('div');
+      div.id = 'aichatbot';
+      d.body.appendChild(div);
+      w.chatbotConfig = args;
+      var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s);
+      j.defer = true;
+      j.type = 'module';
+      j.src = 'https://aichatbot.sendbird.com/index.js';
+      f.parentNode.insertBefore(j, f);
+    }(window, document, 'script', 'F72D2E75-13F5-43F2-AEC3-CDAA499C8CF8', 'BVtOhcUoQSHrmdPHIYEqZ', {
+      apiHost: 'https://api-cf-ap-5.sendbird.com',
+    });
+  </script>
+
+</body>
+</html>
